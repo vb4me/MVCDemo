@@ -31,16 +31,12 @@ End Code
     </div>
 </div>
 
-<address>
-    <strong>North Office</strong><br>
-    @Model.NorthOffice.Street<br>
-    @Model.NorthOffice.City, @Model.NorthOffice.State @Model.NorthOffice.Zip <br>    
-    <abbr title="Phone">P:</abbr>@Model.Phone
-</address>
-<address>
-    <strong>South Office</strong><br>
-    @Model.SouthOffice.Street<br>
-    @Model.SouthOffice.City, @Model.SouthOffice.State @Model.SouthOffice.Zip <br>
-    <abbr title="Phone">P:</abbr>@Model.Phone
-</address>
+@For Each office In Model.Offices
+    @<address>
+        <strong>@office.name</strong><br>
+            @office.Street<br>
+        @office.City, @office.State @office.Zip <br>
+        <abbr title = "Phone" > P:</abbr>@Model.Phone
+    </address>
+Next office
 

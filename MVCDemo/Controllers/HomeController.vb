@@ -2,9 +2,13 @@
     Inherits System.Web.Mvc.Controller
 
     Function Index() As ActionResult
-        Dim vm As New HomeIndexViewModel With {.Phone = "123-123-1234"}
-        vm.NorthOffice = New AddressViewModel With {.Street = "123 N. Main St.", .City = "Lake Mary", .State = "Florida", .Zip = "12345"}
-        vm.SouthOffice = New AddressViewModel With {.Street = "123 S. Main St.", .City = "Lake Mary", .State = "Florida", .Zip = "12345"}
+        Dim vm As New HomeIndexViewModel With {.Phone = "123-123-1234", .Offices = New List(Of AddressViewModel)}
+
+        For x = 1 To 100
+            Dim addr As New AddressViewModel With {.Name = $"Office #{x}", .Street = $"{x} N. Main St.", .City = "Lake Mary", .State = "Florida", .Zip = "12345"}
+            vm.Offices.Add(addr)
+        Next
+
         Return View(vm)
     End Function
 
