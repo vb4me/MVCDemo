@@ -1,4 +1,5 @@
-﻿@Code
+﻿@ModelType MVCDemo.HomeIndexViewModel
+@Code
     ViewData("Title") = "Home Page"
 End Code
 
@@ -29,3 +30,14 @@ End Code
         <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
     </div>
 </div>
+
+<address>
+    <strong>Twitter, Inc.</strong><br>
+    @Model.Street<br>
+    @Model.City, @Model.State @Model.Zip <br>
+    <abbr title="Phone">P:</abbr> (123) 456-7890
+</address>
+<address>
+    <strong>Full Name</strong><br>
+    <a href="mailto:#">first.last@example.com</a>
+</address>
