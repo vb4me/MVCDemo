@@ -32,12 +32,15 @@ End Code
 </div>
 
 <address>
-    <strong>Twitter, Inc.</strong><br>
-    @Model.Street<br>
-    @Model.City, @Model.State @Model.Zip <br>    
+    <strong>North Office</strong><br>
+    @Model.NorthOffice.Street<br>
+    @Model.NorthOffice.City, @Model.NorthOffice.State @Model.NorthOffice.Zip <br>    
     <abbr title="Phone">P:</abbr>@Model.Phone
 </address>
 <address>
-    <strong>Full Name</strong><br>
-    <a href="mailto:#">first.last@example.com</a>
+    <strong>South Office</strong><br>
+    @Model.SouthOffice.Street<br>
+    @Model.SouthOffice.City, @Model.SouthOffice.State @Model.SouthOffice.Zip <br>
+    <abbr title="Phone">P:</abbr>@Model.Phone
 </address>
+
