@@ -34,8 +34,8 @@ End Code
 <address>
     <strong>Twitter, Inc.</strong><br>
     @Model.Street<br>
-    @Model.City, @Model.State @Model.Zip <br>
-    <abbr title="Phone">P:</abbr> (123) 456-7890
+    @Model.City, @Model.State @Model.Zip <br>    
+    <abbr title="Phone">P:</abbr>@Model.Phone
 </address>
 <address>
     <strong>Full Name</strong><br>

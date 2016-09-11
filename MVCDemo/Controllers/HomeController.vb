@@ -2,7 +2,7 @@
     Inherits System.Web.Mvc.Controller
 
     Function Index() As ActionResult
-        Dim vm As New HomeIndexViewModel With {.Street = "123 Main St.", .City = "Lake Mary", .State = "Florida", .Zip = "12345"}
+        Dim vm As New HomeIndexViewModel With {.Street = "123 Main St.", .City = "Lake Mary", .State = "Florida", .Zip = "12345", .Phone = "123-123-1234"}
 
         Return View(vm)
     End Function
